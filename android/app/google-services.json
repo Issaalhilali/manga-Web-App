@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "719926666167",
+    "firebase_url": "https://manga-9aa8f-default-rtdb.firebaseio.com",
+    "project_id": "manga-9aa8f",
+    "storage_bucket": "manga-9aa8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719926666167:android:aa65bff2ad5184627a7e32",
+        "android_client_info": {
+          "package_name": "com.issa.manga"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "719926666167-1ugf10chafih2fcncl5dtvb2bsb08bli.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXq6ocSgSSotYCWlhKUUslxbN_2KZ3fo0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "719926666167-1ugf10chafih2fcncl5dtvb2bsb08bli.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
