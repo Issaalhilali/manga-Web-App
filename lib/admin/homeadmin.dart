@@ -10,7 +10,8 @@ class _HomeAdminState extends State<HomeAdmin> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Text('data'),
+        color: Colors.red,
+        child: Center(child: Text('data')),
       ),
     );
   }
