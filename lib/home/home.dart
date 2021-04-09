@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:manga/admin/screen/app/homeApp.dart';
-import 'package:manga/admin/screen/web/homeWeb.dart';
+import 'package:manga/home/screens/App/homeApp.dart';
+import 'package:manga/home/screens/web/homeWeb.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class HomeAdmin extends StatefulWidget {
+class Home extends StatefulWidget {
   @override
-  _HomeAdminState createState() => _HomeAdminState();
+  _HomeState createState() => _HomeState();
 }
 
-class _HomeAdminState extends State<HomeAdmin> {
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) {
         if (sizingInformation.isDesktop) {
-          return HomeWebAdmin();
+          return HomeWeb();
         }
-        return HomeAppAdmin();
+        return HomeApp();
       },
     );
   }

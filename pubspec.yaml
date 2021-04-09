@@ -30,6 +30,10 @@ dependencies:
   cloud_firestore: ^1.0.4
   firebase_database: ^6.1.2
   firebase_analytics: ^8.0.0-dev.2
+  responsive_builder: ^0.4.1
+  flutter_localizations: 
+    sdk: flutter
+  intl: ^0.17.0
 
 
 
