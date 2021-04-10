@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manga/components/applocal.dart';
 
 class HomeWeb extends StatefulWidget {
   @override
@@ -12,7 +13,9 @@ class _HomeWebState extends State<HomeWeb> {
       appBar: AppBar(
         actions: [
           ButtonBar(
-            children: [Text('data')],
+            children: [
+              Text('${getLang(context, 'home')}'),
+            ],
           )
         ],
       ),
