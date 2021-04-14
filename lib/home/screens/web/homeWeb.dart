@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:manga/admin/screen/login.dart';
+import 'package:manga/components/applocal.dart';
 
 class HomeWeb extends StatefulWidget {
   @override
@@ -11,7 +12,7 @@ class _HomeWebState extends State<HomeWeb> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('لوحة التحكم'),
+        title: Text('${getLang(context, 'home')}'),
         actions: [
           // ignore: deprecated_member_use
           Padding(
@@ -29,9 +30,7 @@ class _HomeWebState extends State<HomeWeb> {
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'لوحة التحكم',
-                  ),
+                  child: Text('${getLang(context, 'home')}'),
                 )),
           ),
           Icon(Icons.account_circle_outlined)

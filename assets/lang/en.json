@@ -1,3 +1,5 @@
 {
-    "home": "home"
+    "home": "home",
+    "add_image" : "Add Image",
+    "No_image_select": "No Image Selected."
 }

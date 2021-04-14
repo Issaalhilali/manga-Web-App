@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:manga/admin/screen/resgister.dart';
+
 import 'package:manga/components/applocal.dart';
 
 class LoginAppAdmin extends StatefulWidget {
@@ -9,10 +11,21 @@ class LoginAppAdmin extends StatefulWidget {
 class _LoginAppAdminState extends State<LoginAppAdmin> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(
+        child: Scaffold(
       body: Center(
-        child: Text('${getLang(context, 'home')}'),
+        child: Column(
+          children: [
+            // ignore: deprecated_member_use
+            FlatButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => RegisterAdmin()));
+                },
+                child: Text('Sigup'))
+          ],
+        ),
       ),
-    );
+    ));
   }
 }

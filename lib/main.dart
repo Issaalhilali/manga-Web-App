@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
+import 'package:manga/admin/providers/auth_provider.dart';
 
 import 'package:manga/admin/screen/login.dart';
+import 'package:manga/admin/screen/resgister.dart';
 import 'package:manga/components/applocal.dart';
 import 'package:manga/home/home.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:intl/intl_browser.dart';
+import 'package:provider/provider.dart';
 
-void main() {
-  runApp(MyApp());
+void main() async {
+  runApp(MultiProvider(
+    providers: [
+      ListenableProvider(create: (_) => AuthProvider()),
+    ],
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -49,6 +56,7 @@ class MyApp extends StatelessWidget {
       routes: {
         Home.id: (context) => Home(),
         LoginAdmin.id: (context) => LoginAdmin(),
+        RegisterAdmin.id: (context) => RegisterAdmin(),
       },
       navigatorObservers: [
         FirebaseAnalyticsObserver(analytics: analytics),
