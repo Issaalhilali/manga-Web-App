@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
+
+import 'package:manga/admin/screen/login.dart';
 import 'package:manga/components/applocal.dart';
 import 'package:manga/home/home.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:intl/intl_browser.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,6 +14,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     FirebaseAnalytics analytics = FirebaseAnalytics();
@@ -40,7 +44,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: Home(),
+      initialRoute: Home.id,
+      // home: Home(),
+      routes: {
+        Home.id: (context) => Home(),
+        LoginAdmin.id: (context) => LoginAdmin(),
+      },
       navigatorObservers: [
         FirebaseAnalyticsObserver(analytics: analytics),
       ],

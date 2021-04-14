@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manga/components/applocal.dart';
 
 class LoginAppAdmin extends StatefulWidget {
   @override
@@ -8,6 +9,10 @@ class LoginAppAdmin extends StatefulWidget {
 class _LoginAppAdminState extends State<LoginAppAdmin> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Center(
+        child: Text('${getLang(context, 'home')}'),
+      ),
+    );
   }
 }
